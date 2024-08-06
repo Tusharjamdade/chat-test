@@ -11,7 +11,7 @@ const Page = () => {
     name:"",
     msg:""
   }])
-  const socket = useMemo(() => io("http://localhost:3002"), []);
+  const socket = useMemo(() => io("https://backend-doef8c1qv-tusharjamdades-projects.vercel.app"), []);
   socket.on("msg",(newmsg:{name:string,msg:string})=>{
     setMsg(prevMsg => [...msg, newmsg]);
   })
